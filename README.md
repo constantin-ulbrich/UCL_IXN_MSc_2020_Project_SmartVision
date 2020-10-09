@@ -10,7 +10,11 @@ Out of the recommended use cases, it was decided to build a proof of concept app
 
 ## What does this repository contain?
 
-This repository contains the research and proof of concept deliverable for the Smart Vision Industry Project with Avanade Inc.
+This repository contains the research and proof of concept deliverable for the Smart Vision Industry Project with Avanade Inc.:
+-SmartVision_ProofOfConcept_DeploymentandUserManuel_Constantin_Ulbrich_vFinalAvanade.pdf
+-SmartVision_ResearchDeliverable_Constantin_Ulbrich_vFinalAvanade.pdf
+
+The Master Thesis associated to this project can be requested from Avanade Inc., UCL, and the author (Constantin Ulbrich).
 
 ## Special Notes:
 
