@@ -1,4 +1,4 @@
-# COMP0073_SmartVision_IndustryProject
+# UCL_IXN_MSc_2020_Project_SmartVision
 
 ## What is this repository about?
 
