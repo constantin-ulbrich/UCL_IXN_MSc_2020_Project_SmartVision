@@ -1,0 +1,208 @@
+
+
+New logging session started
+
+[2020-08-19 15:32:19.251] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (53): k4a_device_t_create(). Created   k4a_device_t 00970920
+[2020-08-19 15:32:19.251] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth_mcu\depth_mcu.c (29): depthmcu_t_create(). Created   depthmcu_t 0096C8E0
+[2020-08-19 15:32:19.251] [trace] [t=15068] d:\a\1\s\extern\azure-kinect-sensor-sdk\src\usbcommand\usb_cmd_priv.h (101): usbcmd_t_create(). Created   usbcmd_t 00963380
+[2020-08-19 15:32:19.481] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (343): find_libusb_device(). Container ID found: {f2b3961e-d8b4-46b0-d6b0-b99ac2e63b95} 
+[2020-08-19 15:32:19.487] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (224): populate_serialnumber(). Serial Number found 001170594512
+[2020-08-19 15:32:19.490] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=00000115, PayloadSize=255
+[2020-08-19 15:32:19.512] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\color_mcu\color_mcu.c (41): colormcu_t_create(). Created   colormcu_t 00975828
+[2020-08-19 15:32:19.512] [trace] [t=15068] d:\a\1\s\extern\azure-kinect-sensor-sdk\src\usbcommand\usb_cmd_priv.h (101): usbcmd_t_create(). Created   usbcmd_t 00964070
+[2020-08-19 15:32:19.698] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (343): find_libusb_device(). Container ID found: {f2b3961e-d8b4-46b0-d6b0-b99ac2e63b95} 
+[2020-08-19 15:32:19.700] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (224): populate_serialnumber(). Serial Number found 001170594512
+[2020-08-19 15:32:19.700] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\calibration\calibration.c (47): calibration_t_create(). Created   calibration_t 0098B898
+[2020-08-19 15:32:19.700] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=00000111, PayloadSize=10240
+[2020-08-19 15:32:19.719] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\capturesync\capturesync.c (54): capturesync_t_create(). Created   capturesync_t 00984A30
+[2020-08-19 15:32:19.719] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_create(). Created   queue_t 00996538
+[2020-08-19 15:32:19.719] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_create(). Created   queue_t 00996618
+[2020-08-19 15:32:19.719] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_create(). Created   queue_t 00996570
+[2020-08-19 15:32:19.719] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (51): depth_t_create(). Created   depth_t 00961AD8
+[2020-08-19 15:32:19.719] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=00000201, PayloadSize=18
+[2020-08-19 15:32:19.722] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=00000201, PayloadSize=18
+[2020-08-19 15:32:19.736] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (225): ******************** Device Info ********************
+[2020-08-19 15:32:19.764] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (226): K4A SDK version:     1.4.1
+[2020-08-19 15:32:19.764] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=00000115, PayloadSize=255
+[2020-08-19 15:32:19.779] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (232): Serial Number:       001170594512
+[2020-08-19 15:32:19.779] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (236): RGB Sensor Version:  1.6.110
+[2020-08-19 15:32:19.780] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (239): Depth Sensor Version:1.6.79
+[2020-08-19 15:32:19.780] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (242): Mic Array Version:   1.6.14
+[2020-08-19 15:32:19.780] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (245): Sensor Config:       6109.7
+[2020-08-19 15:32:19.780] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (248): Build type:          Release
+[2020-08-19 15:32:19.780] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (253): Signature type:      MSFT
+[2020-08-19 15:32:19.780] [critical] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (259): ****************************************************
+[2020-08-19 15:32:19.780] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\dewrapper\dewrapper.c (57): dewrapper_t_create(). Created   dewrapper_t 00977DD8
+[2020-08-19 15:32:19.780] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_create(). Created   queue_t 009966F8
+[2020-08-19 15:32:19.780] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=000000f2, PayloadSize=0
+[2020-08-19 15:32:19.785] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=0000000a, PayloadSize=0
+[2020-08-19 15:32:19.789] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\color\color.cpp (45): color_t_create(). Created   color_t 0097B458
+[2020-08-19 15:32:19.931] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\imu\imu.c (70): imu_t_create(). Created   imu_t 009FBED0
+[2020-08-19 15:32:19.931] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_create(). Created   queue_t 009E41C8
+[2020-08-19 15:32:19.931] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=80000004, PayloadSize=0
+[2020-08-19 15:32:19.932] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (850): k4a_device_start_cameras(). k4a_device_start_cameras starting
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (868): k4a_device_start_cameras(). Starting camera's with the following config.
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (869): k4a_device_start_cameras().     color_format:0
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (870): k4a_device_start_cameras().     color_resolution:5
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (871): k4a_device_start_cameras().     depth_mode:2
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (872): k4a_device_start_cameras().     camera_fps:2
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (873): k4a_device_start_cameras().     synchronized_images_only:0
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (874): k4a_device_start_cameras().     depth_delay_off_color_usec:0
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (875): k4a_device_start_cameras().     wired_sync_mode:0
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (876): k4a_device_start_cameras().     subordinate_delay_off_master_usec:0
+[2020-08-19 15:32:19.932] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (877): k4a_device_start_cameras().     disable_streaming_indicator:0
+[2020-08-19 15:32:19.932] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (649): usb_cmd_io(). XFR: Cmd=80000001, CmdLength=13, PayloadSize=0, CmdData=00000000 00000000...
+[2020-08-19 15:32:19.942] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (649): usb_cmd_io(). XFR: Cmd=000000e1, CmdLength=4, PayloadSize=0, CmdData=00000004 00000002...
+[2020-08-19 15:32:19.943] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (649): usb_cmd_io(). XFR: Cmd=00000022, CmdLength=4, PayloadSize=2000000, CmdData=00000002 025e5020...
+[2020-08-19 15:32:19.949] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\dynlib\dynlib_windows.c (22): dynlib_t_create(). Created   dynlib_t 009E17E8
+[2020-08-19 15:32:19.952] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\dynlib\dynlib_windows.c (131): dynlib_create(). Depth Engine loaded C:\Users\const\source\repos\Azure_Kinect_Controller\Debug\depthengine_2_0.DLL
+[2020-08-19 15:32:19.952] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\deloader\deloader.cpp (51): verify_plugin(). Loaded Depth Engine version: 2.1.3
+[2020-08-19 15:32:20.963] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (649): usb_cmd_io(). XFR: Cmd=00000103, CmdLength=4, PayloadSize=0, CmdData=0000001e 00000002...
+[2020-08-19 15:32:20.964] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=00000009, PayloadSize=0
+[2020-08-19 15:32:20.966] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=000000f1, PayloadSize=0
+[2020-08-19 15:32:20.981] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E57B8
+[2020-08-19 15:32:20.982] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5AB8
+[2020-08-19 15:32:20.983] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (916): k4a_device_start_cameras(). k4a_device_start_cameras started
+[2020-08-19 15:32:20.984] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5B18
+[2020-08-19 15:32:20.985] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5698
+[2020-08-19 15:32:20.987] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5B78
+[2020-08-19 15:32:20.989] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5C98
+[2020-08-19 15:32:20.991] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5DB8
+[2020-08-19 15:32:20.992] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5C38
+[2020-08-19 15:32:21.040] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3268
+[2020-08-19 15:32:21.040] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5938
+[2020-08-19 15:32:21.073] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E31F0
+[2020-08-19 15:32:21.073] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5E18
+[2020-08-19 15:32:21.107] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3290
+[2020-08-19 15:32:21.107] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E56F8
+[2020-08-19 15:32:21.141] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E2FE8
+[2020-08-19 15:32:21.143] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5AB8
+[2020-08-19 15:32:21.143] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E31F0
+[2020-08-19 15:32:21.143] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E60B8
+[2020-08-19 15:32:21.174] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3100
+[2020-08-19 15:32:21.175] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5B18
+[2020-08-19 15:32:21.175] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3290
+[2020-08-19 15:32:21.175] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E58D8
+[2020-08-19 15:32:21.207] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3380
+[2020-08-19 15:32:21.209] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5698
+[2020-08-19 15:32:21.209] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E2FE8
+[2020-08-19 15:32:21.209] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5AB8
+[2020-08-19 15:32:21.219] [warning] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\dewrapper\dewrapper.c (278): depth_engine_thread(). Depth image processing is too slow at 179ms (this may be transient).
+[2020-08-19 15:32:21.219] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E31A0
+[2020-08-19 15:32:21.219] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5BD8
+[2020-08-19 15:32:21.219] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5E78
+[2020-08-19 15:32:21.220] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5BD8
+[2020-08-19 15:32:21.220] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5E78
+[2020-08-19 15:32:21.220] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E31A0
+[2020-08-19 15:32:21.220] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3268
+[2020-08-19 15:32:21.221] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E57B8
+[2020-08-19 15:32:21.221] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (170): queue_pop(). Queue "dewrapper" dropped oldest 3 captures from queue.
+[2020-08-19 15:32:21.240] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3150
+[2020-08-19 15:32:21.240] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5CF8
+[2020-08-19 15:32:21.240] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E6118
+[2020-08-19 15:32:21.240] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5CF8
+[2020-08-19 15:32:21.241] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E6118
+[2020-08-19 15:32:21.241] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3150
+[2020-08-19 15:32:21.241] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3100
+[2020-08-19 15:32:21.243] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5B78
+[2020-08-19 15:32:21.258] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E33F8
+[2020-08-19 15:32:21.258] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E57B8
+[2020-08-19 15:32:21.258] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5E78
+[2020-08-19 15:32:21.258] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\capturesync\capturesync.c (277): capturesync_add_capture(). Dropped 2 depth captures waiting for time stamps to stabilize
+[2020-08-19 15:32:21.258] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3380
+[2020-08-19 15:32:21.260] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5C98
+[2020-08-19 15:32:21.408] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E2FC0
+[2020-08-19 15:32:21.408] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5758
+[2020-08-19 15:32:21.424] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E33A8
+[2020-08-19 15:32:21.424] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5F98
+[2020-08-19 15:32:21.424] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5C98
+[2020-08-19 15:32:21.424] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E2FC0
+[2020-08-19 15:32:21.426] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5DB8
+[2020-08-19 15:32:21.441] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E2F98
+[2020-08-19 15:32:21.441] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E6118
+[2020-08-19 15:32:21.455] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E33D0
+[2020-08-19 15:32:21.455] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E61D8
+[2020-08-19 15:32:21.456] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5CF8
+[2020-08-19 15:32:21.456] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E2F98
+[2020-08-19 15:32:21.457] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5C38
+[2020-08-19 15:32:21.475] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E30B0
+[2020-08-19 15:32:21.475] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5698
+[2020-08-19 15:32:21.494] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3330
+[2020-08-19 15:32:21.494] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E6178
+[2020-08-19 15:32:21.494] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5878
+[2020-08-19 15:32:21.494] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E30B0
+[2020-08-19 15:32:21.496] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5938
+[2020-08-19 15:32:21.510] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E6238
+[2020-08-19 15:32:21.510] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3290
+[2020-08-19 15:32:21.510] [info] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\capturesync\capturesync.c (86): drop_sample(). capturesync_drop, Dropping sample TS:    200000 type:Depth
+[2020-08-19 15:32:21.510] [info] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\capturesync\capturesync.c (86): drop_sample(). capturesync_drop, Dropping sample TS:    266888 type:Depth
+[2020-08-19 15:32:21.510] [info] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\capturesync\capturesync.c (86): drop_sample(). capturesync_drop, Dropping sample TS:    300188 type:Depth
+[2020-08-19 15:32:21.510] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3290
+[2020-08-19 15:32:21.510] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E2FC0
+[2020-08-19 15:32:21.511] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E5B18
+[2020-08-19 15:32:21.511] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E57B8
+[2020-08-19 15:32:21.512] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5E78
+[2020-08-19 15:32:21.512] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E33F8
+[2020-08-19 15:32:21.512] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (931): k4a_device_stop_cameras(). k4a_device_stop_cameras stopping
+[2020-08-19 15:32:21.512] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5F98
+[2020-08-19 15:32:21.513] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5C98
+[2020-08-19 15:32:21.513] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E33A8
+[2020-08-19 15:32:21.513] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E61D8
+[2020-08-19 15:32:21.513] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5CF8
+[2020-08-19 15:32:21.513] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E33D0
+[2020-08-19 15:32:21.514] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E6238
+[2020-08-19 15:32:21.514] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E6178
+[2020-08-19 15:32:21.514] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5878
+[2020-08-19 15:32:21.514] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3330
+[2020-08-19 15:32:21.524] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E2F70
+[2020-08-19 15:32:21.524] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E6178
+[2020-08-19 15:32:21.524] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E61D8
+[2020-08-19 15:32:21.524] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E6178
+[2020-08-19 15:32:21.525] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E61D8
+[2020-08-19 15:32:21.525] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E2F70
+[2020-08-19 15:32:21.525] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E2FC0
+[2020-08-19 15:32:21.526] [trace] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5E18
+[2020-08-19 15:32:21.542] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E57B8
+[2020-08-19 15:32:21.542] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E3100
+[2020-08-19 15:32:21.542] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E57B8
+[2020-08-19 15:32:21.542] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E3100
+[2020-08-19 15:32:21.545] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E56F8
+[2020-08-19 15:32:21.548] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5698
+[2020-08-19 15:32:21.550] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5B18
+[2020-08-19 15:32:21.552] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E60B8
+[2020-08-19 15:32:21.555] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E58D8
+[2020-08-19 15:32:21.557] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5AB8
+[2020-08-19 15:32:21.560] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E5758
+[2020-08-19 15:32:21.562] [trace] [t=3776] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E6118
+[2020-08-19 15:32:21.563] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=000000f2, PayloadSize=0
+[2020-08-19 15:32:21.565] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\usbcommand\usbcommand.c (653): usb_cmd_io(). XFR: Cmd=0000000a, PayloadSize=0
+[2020-08-19 15:32:21.574] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 035E6178
+[2020-08-19 15:32:21.574] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E31C8
+[2020-08-19 15:32:21.574] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 035E6178
+[2020-08-19 15:32:21.574] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E31C8
+[2020-08-19 15:32:21.576] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (278): queue_disable(). Queue "dewrapper" waiting for blocking call to complete.
+[2020-08-19 15:32:21.576] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (300): queue_stop(). Queue "Queue_capture" stopped, shutting down and notifying consumers.
+[2020-08-19 15:32:21.576] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (300): queue_stop(). Queue "Queue_depth" stopped, shutting down and notifying consumers.
+[2020-08-19 15:32:21.576] [info] [t=2404] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (300): queue_stop(). Queue "Queue_color" stopped, shutting down and notifying consumers.
+[2020-08-19 15:32:21.609] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_create(). Created   k4a_image_t 00989870
+[2020-08-19 15:32:21.609] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_create(). Created   k4a_capture_t 035E32B8
+[2020-08-19 15:32:21.609] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\image\image.c (51): k4a_image_t_destroy(). Destroyed k4a_image_t 00989870
+[2020-08-19 15:32:21.609] [trace] [t=27288] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\allocator\allocator.c (118): k4a_capture_t_destroy(). Destroyed k4a_capture_t 035E32B8
+[2020-08-19 15:32:22.041] [info] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (952): k4a_device_stop_cameras(). k4a_device_stop_cameras stopped
+[2020-08-19 15:32:22.041] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_destroy(). Destroyed queue_t 009E41C8
+[2020-08-19 15:32:22.041] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\imu\imu.c (70): imu_t_destroy(). Destroyed imu_t 009FBED0
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\color\color.cpp (45): color_t_destroy(). Destroyed color_t 0097B458
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_destroy(). Destroyed queue_t 009966F8
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\dewrapper\dewrapper.c (57): dewrapper_t_destroy(). Destroyed dewrapper_t 00977DD8
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth\depth.c (51): depth_t_destroy(). Destroyed depth_t 00961AD8
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_destroy(). Destroyed queue_t 00996538
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_destroy(). Destroyed queue_t 00996618
+[2020-08-19 15:32:22.249] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\queue\queue.c (39): queue_t_destroy(). Destroyed queue_t 00996570
+[2020-08-19 15:32:22.250] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\capturesync\capturesync.c (54): capturesync_t_destroy(). Destroyed capturesync_t 00984A30
+[2020-08-19 15:32:22.250] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\calibration\calibration.c (47): calibration_t_destroy(). Destroyed calibration_t 0098B898
+[2020-08-19 15:32:22.250] [trace] [t=15068] d:\a\1\s\extern\azure-kinect-sensor-sdk\src\usbcommand\usb_cmd_priv.h (101): usbcmd_t_destroy(). Destroyed usbcmd_t 00963380
+[2020-08-19 15:32:22.250] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\depth_mcu\depth_mcu.c (29): depthmcu_t_destroy(). Destroyed depthmcu_t 0096C8E0
+[2020-08-19 15:32:22.252] [trace] [t=15068] d:\a\1\s\extern\azure-kinect-sensor-sdk\src\usbcommand\usb_cmd_priv.h (101): usbcmd_t_destroy(). Destroyed usbcmd_t 00964070
+[2020-08-19 15:32:22.252] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\color_mcu\color_mcu.c (41): colormcu_t_destroy(). Destroyed colormcu_t 00975828
+[2020-08-19 15:32:22.252] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\sdk\k4a.c (53): k4a_device_t_destroy(). Destroyed k4a_device_t 00970920
+[2020-08-19 15:32:22.254] [trace] [t=15068] D:\a\1\s\extern\Azure-Kinect-Sensor-SDK\src\dynlib\dynlib_windows.c (22): dynlib_t_destroy(). Destroyed dynlib_t 009E17E8

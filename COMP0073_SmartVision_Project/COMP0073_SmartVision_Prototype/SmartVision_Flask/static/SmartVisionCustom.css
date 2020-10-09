@@ -1,0 +1,51 @@
+/* Styling formats for Bootstrap HTLM elements have been adapted from a personal previous coursework (specifically the SmileWebInterface component): Sacco, A., Lin, Y. & Ulbrich, C. (2020).'Development of a Mobile Application for Oral Health Education - Team 14', COMP0073: Design. University College London. Unpublished Coursework.*/
+h1{
+    color: #ff5800;
+}
+
+kbd {
+    background-color: #ff5800;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active{
+    background-color: #ff5800 !important;
+    border: #ff5800 !important;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active{
+    background-color: #E6E8E6 !important;
+    border: #E6E8E6 !important;
+}
+
+.btn-secondary{
+    background-color: #ff5800 !important;
+    border: #E6E8E6 !important;
+}
+
+a {
+    color: #ff5800;
+}
+
+a:hover { 
+    color: #ff5800 !important; 
+}
+
+.btn-outline-primary {
+    background-color: white !important;
+    border-color: #ff5800 !important;
+    color: #ff5800 !important;
+}
+
+.btn-outline-primary:hover{
+    background-color: #ff5800 !important;
+    border-color: #ff5800 !important;
+    color: white !important;
+}
+
+#feedback-message-p {
+    font-size: 20px; 
+    margin-top: 20px; 
+    margin-left: 3%;
+    margin-bottom: 0px;
+    margin-right: 3%;
+}

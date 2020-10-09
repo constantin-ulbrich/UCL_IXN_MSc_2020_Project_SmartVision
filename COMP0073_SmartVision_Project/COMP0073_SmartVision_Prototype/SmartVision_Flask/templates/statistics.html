@@ -1,0 +1,504 @@
+{% extends 'layout.html'%}
+{% block title %}SmartVision Statistics{% endblock %}
+{% block body %}
+<div class="container" style="margin-top:30px;">
+    <div class="row justify-content-center">';
+        <p align="middle" style="font-size: 50px;">View the Stats collected from the SmartVision Algorithm below!</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="row justify-content-center">
+            <form method="post" action="{{url_for('generateStatistic')}}">
+                <div class="btn-group btn-group-lg" role="group" aria-label="Button group with nested dropdown">
+                    <button class="btn btn-secondary" type="submit" name= "button_timePeriod" id="latestAnalysis" value="latestAnalysis" style="background-color: #ff5800;">Latest Analysis</button>
+                    <button class="btn btn-secondary" type="submit" name= "button_timePeriod" id="today" value="today" style="background-color: #ff5800;">Today</button>
+                    <button class="btn btn-secondary" type="submit" name= "button_timePeriod" id="lastWeek" value="lastWeek" style="background-color: #ff5800;">Last Week</button>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Month
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="lastMonth" value="month_0">Last Month</button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="January" value="month_1">January</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="February" value="month_2">February</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="March" value="month_3">March</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="April" value="month_4">April</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="May" value="month_5">May</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="June" value="month_6">June</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="July" value="month_7">July</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="August" value="month_8">August</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="September" value="month_9">September</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="October" value="month_10">October</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="November" value="month_11">November</button>
+                            <button class="dropdown-item" type="submit" name= "button_timePeriod" id="December" value="month_12">December</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" type="submit" name= "button_timePeriod" id="currentYear" value="currentYear" style="background-color: #ff5800;">Current Year</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    {% if timePeriod == "latestAnalysis" %}
+        <div id="refreshSection">
+            <div class="row justify-content-center">
+                <div class="col-sm-10" style="margin-top:30px">
+                    <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                        <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                            <h3 style = "color:white">Latest Results of Frame Analysis - Key Stats</h3>
+                        </div>
+                            <div style="margin-left:32px; margin-right:32px">   
+                                <div align="center">
+                                    <p align="middle" style="font-size: 30px;">Time of Analysis: {{analysisTime}}</p>
+                                    <p align="middle" style="font-size: 30px;">Occupation Status: {{occupationStatus}}</p>
+                                    <p align="middle" style="font-size: 30px;">Current Dominant Mood: {{dominantEmotion}}</p>
+                                </div>          
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-10" style="margin-top:30px">
+                    <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                        <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                            <h3 style = "color:white">Latest Results of Frame Analysis - Analysed Image</h3>
+                        </div>
+                        <div style="margin-left:32px; margin-right:32px">   
+                            <div align="center">
+                                <img src="{{imageURL}}" onerror="if (this.src != '../static/analysed_error_image.png') this.src = '../static/analysed_error_image.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif timePeriod == "today" %}
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Daily Occupation
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dailyOccupation" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="dailyOccupation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Relative Occupation</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The relative occupation is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be occupied over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the course of the day:
+                                        <br><br>
+                                        Relative Occupation = (# of occupied readings) / (total # of readings)
+                                        <br><br>
+                                        The relative availability is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be available over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the course of the day:
+                                        <br><br>
+                                        Relative Availability = (# of available readings) / (total # of readings)
+                                        <br><br>
+                                        Note: total # of readings =  # of occupied readings + # of available readings
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{occupation_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_daily.png') this.src = '../static/analysed_error_image_daily.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Daily Dominant Emotions
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dailyEmotion" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="dailyEmotion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Dominant Emotions</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The score of the emotions is calculated relative (base 10) to the total number of times it was 
+                                        attempted by the SmartVision Algorithm to detect an emotion in the face on an employee over the course of today.
+                                        Let's demonstrate the calculation of an emotion score using the emotion Happiness as an example:
+                                        <br><br>
+                                        Time Period: Today <br>
+                                        1. Determine the total count the emotion happiness was detected (# of Time Happiness Detected).<br>
+                                        2. Determine the total attempts of the SmartVision Algorithm to detect an emotion (# of Emotion Analysis Attempts).<br>
+                                        3. Relative emotion score of happiness = ((# of Time Happiness Detected) / (# of Emotion Analysis Attempts)) * 10<br>
+                                        <br><br>
+                                        This is repeated for every emotion or analysis state visible on the radar chart.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{emotion_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_daily.png') this.src = '../static/analysed_error_image_daily.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif timePeriod == "lastWeek" %}
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Last Week's Occupation
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lastWeekOccupation" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="lastWeekOccupation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Relative Occupation</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The relative occupation is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be occupied over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the last week's time period:
+                                        <br><br>
+                                        Relative Occupation = (# of occupied readings) / (total # of readings)
+                                        <br><br>
+                                        The relative availability is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be available over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the last week's time period:
+                                        <br><br>
+                                        Relative Availability = (# of available readings) / (total # of readings)
+                                        <br><br>
+                                        Note: total # of readings =  # of occupied readings + # of available readings
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{occupation_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_lastWeek.png') this.src = '../static/analysed_error_image_lastWeek.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Last Week's Dominant Emotions
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lastWeekEmotion" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="lastWeekEmotion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Dominant Emotions</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The score of the emotions is calculated relative (base 10) to the total number of times it was 
+                                        attempted by the SmartVision Algorithm to detect an emotion in the face on an employee over the course of last week.
+                                        Let's demonstrate the calculation of an emotion score using the emotion Happiness as an example:
+                                        <br><br>
+                                        Time Period: Last Week <br>
+                                        1. Determine the total count the emotion happiness was detected (# of Time Happiness Detected).<br>
+                                        2. Determine the total attempts of the SmartVision Algorithm to detect an emotion (# of Emotion Analysis Attempts).<br>
+                                        3. Relative emotion score of happiness = ((# of Time Happiness Detected) / (# of Emotion Analysis Attempts)) * 10<br>
+                                        <br><br>
+                                        This is repeated for every emotion or analysis state visible on the radar chart.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{emotion_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_lastWeek.png') this.src = '../static/analysed_error_image_lastWeek.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif timePeriod[0:5] == "month" %}
+        {% if timePeriod[-1] == "0" %}
+            {% set header_month = "the Last Month" %}
+        {% elif timePeriod[-1] == "1" %}
+            {% set header_month = "January" %}
+        {% elif timePeriod[-1] == "2" %}
+            {% set header_month = "February" %}
+        {% elif timePeriod[-1] == "3" %}
+            {% set header_month = "March" %}
+        {% elif timePeriod[-1] == "4" %}
+            {% set header_month = "April" %}
+        {% elif timePeriod[-1] == "5" %}
+            {% set header_month = "May" %}
+        {% elif timePeriod[-1] == "6" %}
+            {% set header_month = "June" %}
+        {% elif timePeriod[-1] == "7" %}
+            {% set header_month = "July" %}
+        {% elif timePeriod[-1] == "8" %}
+            {% set header_month = "August" %}
+        {% elif timePeriod[-1] == "9" %}
+            {% set header_month = "September" %}
+        {% elif timePeriod[-1] == "10" %}
+            {% set header_month = "October" %}
+        {% elif timePeriod[-1] == "11" %}
+            {% set header_month = "Nobember" %}
+        {% elif timePeriod[-1] == "12" %}
+            {% set header_month = "December" %}
+        {% endif %}
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white"> Occupation in {{header_month}}
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#monthOccupation" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="monthOccupation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Relative Occupation</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The relative occupation is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be occupied over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the course of the selected month:
+                                        <br><br>
+                                        Relative Occupation = (# of occupied readings) / (total # of readings)
+                                        <br><br>
+                                        The relative availability is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be available over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the course of the selected month:
+                                        <br><br>
+                                        Relative Availability = (# of available readings) / (total # of readings)
+                                        <br><br>
+                                        Note: total # of readings =  # of occupied readings + # of available readings
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{occupation_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_month.png') this.src = '../static/analysed_error_image_month.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white"> Detected Dominant Emotions in {{header_month}}
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#monthEmotion" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="monthEmotion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Dominant Emotions</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The score of the emotions is calculated relative (base 10) to the total number of times it was 
+                                        attempted by the SmartVision Algorithm to detect an emotion in the face on an employee over the course of the selected month.
+                                        Let's demonstrate the calculation of an emotion score using the emotion Happiness as an example:
+                                        <br><br>
+                                        Time Period: Selected Month <br>
+                                        1. Determine the total count the emotion happiness was detected (# of Time Happiness Detected).<br>
+                                        2. Determine the total attempts of the SmartVision Algorithm to detect an emotion (# of Emotion Analysis Attempts).<br>
+                                        3. Relative emotion score of happiness = ((# of Time Happiness Detected) / (# of Emotion Analysis Attempts)) * 10<br>
+                                        <br><br>
+                                        This is repeated for every emotion or analysis state visible on the radar chart.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{emotion_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_month.png') this.src = '../static/analysed_error_image_month.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif timePeriod == "currentYear" %}
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Current Year's Occupation
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yearOccupation" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="yearOccupation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Relative Occupation</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The relative occupation is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be occupied over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the course of the current year:
+                                        <br><br>
+                                        Relative Occupation = (# of occupied readings) / (total # of readings)
+                                        <br><br>
+                                        The relative availability is calculated by the number of times the SmartVision Algorithm
+                                        assessed the workstation to be available over the total times of the analysis attempts
+                                        of the SmartVision Algorithm over the course of the current year:
+                                        <br><br>
+                                        Relative Availability = (# of available readings) / (total # of readings)
+                                        <br><br>
+                                        Note: total # of readings =  # of occupied readings + # of available readings
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{occupation_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_year.png') this.src = '../static/analysed_error_image_year.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Current Year's Dominant Emotions
+                            <!-- Initiator Button of Modal Starts-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#monthEmotion" style="background-color: #ff5800 !important;">
+                                <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <!-- Modal Starts-->
+                        <div class="modal fade" id="monthEmotion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Calculation of the Dominant Emotions</h5>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify;">
+                                        The score of the emotions is calculated relative (base 10) to the total number of times it was 
+                                        attempted by the SmartVision Algorithm to detect an emotion in the face on an employee over the course of the current year.
+                                        Let's demonstrate the calculation of an emotion score using the emotion Happiness as an example:
+                                        <br><br>
+                                        Time Period: Current Year <br>
+                                        1. Determine the total count the emotion happiness was detected (# of Time Happiness Detected).<br>
+                                        2. Determine the total attempts of the SmartVision Algorithm to detect an emotion (# of Emotion Analysis Attempts).<br>
+                                        3. Relative emotion score of happiness = ((# of Time Happiness Detected) / (# of Emotion Analysis Attempts)) * 10<br>
+                                        <br><br>
+                                        This is repeated for every emotion or analysis state visible on the radar chart.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Ends"-->
+                    </div>
+                    <div style="margin-left:32px; margin-right:32px">   
+                        <div align="center">
+                            <img src="{{emotion_stat_image}}" onerror="if (this.src != '../static/analysed_error_image_year.png') this.src = '../static/analysed_error_image_year.png';" alt="analysed_workstation" style="max-width: 100%; height:auto;">
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

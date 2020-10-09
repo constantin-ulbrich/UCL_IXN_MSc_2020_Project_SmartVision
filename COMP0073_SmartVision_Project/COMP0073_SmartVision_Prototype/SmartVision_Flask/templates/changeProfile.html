@@ -1,0 +1,111 @@
+<!-- Styling ideas for the arrangement of the HTML elements were drawn from a personal previous coursework (specifically the SmileWebInterface component): Sacco, A., Lin, Y. & Ulbrich, C. (2020).'Development of a Mobile Application for Oral Health Education - Team 14', COMP0073: Design. University College London. Unpublished Coursework.-->
+{% extends 'layout.html'%}
+{% block head %}
+{% endblock %}
+{% block title %}Alter Profile Info{% endblock %}
+{% block body %}
+<form method="post" action="{{url_for('changeProfile')}}">
+    <div class = "container" style = "margin-top:30px">
+        <div class="row justify-content-center">
+            <div class="col-sm-5" style="margin-top:250px; text-align: center;">
+                <h1 style="color:#d6efff">Your Account</h1>
+                  <svg class="bi bi-caret-down" width="3.5em" height="3.5em" viewBox="0 0 16 16" fill="currentColor" style="color:#ff5800;"  xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 001.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 00-.753 1.659z" clip-rule="evenodd"/>
+                  </svg>
+                <h1 style="color:#ff5800">Edit Your <kbd style="background-color: #ff5800">SmartVision</kbd>&nbsp;Profile</h1>
+            </div>
+            <div class="col-sm-7" style="margin-top:30px">
+                <div class = "jumbotron rounded-lg" style = " min-width:90%; padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-bottom: 2rem; margin-top:30px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800; padding-top:10px; padding-bottom:5px; text-align: center" >
+                        <h3 style = "color:white">Edit Profile Data</h3>
+                    </div>
+                        <div style="margin-left:32px; margin-right:32px">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <br>
+                                    <input  class= "form-control" type="text" name="fname" id="firstName" value="{{firstName}}" style="margin-bottom:8px">
+                                    {% if error_firstName == 'error_required' %}
+                                    <div class="invalid-feedback d-block">First Name Required*</div>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <br>
+                                    <input class ="form-control" type="text" name="lname" id="lastName" value="{{lastName}}" style="margin-bottom:8px">
+                                    {% if error_lastName == 'error_required' %}
+                                    <div class="invalid-feedback d-block">Last Name Required*</div>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <br>
+                                    <input class="form-control" type="email" name="email" id="eMail" value="{{email}}" style="margin-bottom:8px">
+                                    {% if error_email == 'error_required' %}
+                                    <div class="invalid-feedback d-block">Email Required*</div>
+                                    {% elif error_email == 'error_identical' %}
+                                    <div class="invalid-feedback d-block">Old and New Email are Identical*</div>
+                                    {% elif error_email == 'error_exist' %}
+                                    <div class="invalid-feedback d-block">Email Already Exists*</div>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name of Institution</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="institution" id="institution" value="{{institution}}" style="margin-bottom:8px">
+                                    {% if error_institution == 'error_required' %}
+                                    <div class="invalid-feedback d-block">Name of Institution Required*</div>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name of Department</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="department" id="department" value="{{department}}" style="margin-bottom:8px">
+                                    {% if error_department == 'error_required' %}
+                                    <div class="invalid-feedback d-block">Name of Department Required*</div>
+                                    {% endif %}
+                                </div>
+    
+                                <div align="center">
+                                <input class="btn btn-primary" type="submit" value="Submit">
+                                </div>  
+                        </div>
+                </div>
+                {% if updateSuccessful == 'success' %} 
+                    <div class="alert alert-success">
+                        <small><strong>Details Changed Successfully!</strong></small>
+                        <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                            <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                            <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                {% elif updateSuccessful == 'inputError' %}
+                    <div class="alert alert-danger">
+                        <small><strong>Input Error!</strong> Review Input!</small>
+                        <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                            <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                            <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                {% elif updateSuccessful == 'DBerror' %}
+                    <div class="alert alert-danger">
+                        <small><strong>Database Error!</strong> Something Went Wrong!</small>
+                        <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                            <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                            <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                {% endif %} 
+            </div>
+        </div>
+    </div>
+    </form>
+{% endblock %}

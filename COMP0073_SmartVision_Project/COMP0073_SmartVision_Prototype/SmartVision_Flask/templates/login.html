@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> SmartVision System Login </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/SmartVisionCustom.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class = "container vh-100">
+        <div class="row">
+            <div class="col-sm-8" style="margin-right: auto; margin-left: auto;">
+                <div class = "jumbotron rounded-lg" style = " padding-top:0rem; padding-right: 0rem; padding-left:0rem; padding-bottom:1rem; margin-top:90px; background-color:#FFFFFF; padding-bottom:10px;border: solid; border-color:#ff5800; border-width: 4px;">
+                    <div style="text-align: center; margin-left:32px; margin-right:32px; margin-top: 15px;"> 
+                        <h1 style="text-align: center; font-size: 60px;"><small>Welcome to the<br><kbd>SmartVision</kbd><br>Prototype Interface</small></h1>
+                        <form method="post" action="{{ url_for('login') }}" style="margin-top: 25px;">
+                            <input type = "text" class="form-control" name = "username" placeholder = 'Username' style="max-width: 22rem; margin-left: auto; margin-right: auto;">
+                            <input type = "password" class = "form-control" name = "password" placeholder = 'Password' style="max-width: 22rem; margin-left: auto; margin-right: auto;">
+                            <br>
+                            <input type = "submit" class="btn btn-primary btn-lg" value = "Login">
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class = "row h-25 justify-content-center align-items-baseline">    
+                <div class="col-4">
+                    {% if username == 'incorrect' %}
+                    <div class="alert alert-danger">
+                        <small><strong>Error! </strong>Incorrect Username or it Doesn't Exist</small>
+                        <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                            <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                            <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    {% else %}
+                    {% endif %}
+                    {% if password == 'incorrect' %}
+                    <div class="alert alert-danger">
+                        <small><strong>Error! </strong>Incorrect Password</small>
+                        <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                            <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                            <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    {% else %}
+                    {% endif %}
+                    {% if nousers == 'correct' %}
+                    <div class="alert alert-danger">
+                        <small><strong>Error! </strong>No user accounts exist!</small>
+                        <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                            <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                            <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    {% else %}
+                    {% endif %}
+                </div>   
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+##### Requirements for the Proof of Concept SmartVision System #####
+pillow
+azure-cognitiveservices-vision-computervision
+azure-cognitiveservices-vision-customvision
+azure-cognitiveservices-vision-face
+azure-storage-blob
+mysql-connector-python
+numpy
+matplotlib
+Flask
+schedule

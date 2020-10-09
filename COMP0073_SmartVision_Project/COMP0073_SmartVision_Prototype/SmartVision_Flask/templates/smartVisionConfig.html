@@ -1,0 +1,256 @@
+<!-- Styling of HTML elements was inspired by a personal previous coursework (specifically the SmileWebInterface component): Sacco, A., Lin, Y. & Ulbrich, C. (2020).'Development of a Mobile Application for Oral Health Education - Team 14', COMP0073: Design. University College London. Unpublished Coursework.-->
+{% extends 'layout.html'%}
+{% block head %}
+{% endblock %}
+{% block title %}SmartVision Algorithm Configuration{% endblock %}
+{% block body %}
+<div class="container" style="margin-top:30px;">
+    <div class="row justify-content-center">';
+        <p align="middle" style="font-size: 50px;">Let's Configure the Smart Vision Algorithm!</p>
+    </div>
+</div>
+
+<div class = "container" style = "margin-top:30px">
+    <div class="row justify-center">
+        <div class="col-sm-7">
+          <div class = "jumbotron rounded-lg" style = "min-width: 90%; padding-top:0;padding-right:0;padding-left:0; padding-bottom:10px; margin-top: 30px; margin-right: 5px; background-color:white; border: solid; border-color:#ff5800; border-width: 4px;">
+            <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800 !important; margin-bottom: 0px; padding-top:10px; padding-bottom:5px; text-align: center;">
+                <h2 style = "color:white">Detectable CutsomVision Objects
+                    <!-- Initiator Button of Modal Starts-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detectableObjects" style="background-color: #ff5800 !important;">
+                        <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                        </svg>
+                    </button>
+                </h2>
+                    <!-- Modal Starts-->
+                    <div class="modal fade" id="detectableObjects" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Detectable CustomVision Objects</h5>
+                                </div>
+                                <div class="modal-body" style="text-align: justify;">
+                                    Detectable CustomVision Objects are the objects which the SmartVision Algorithm is looking for on a workstation.<br><br>
+                                    Each target object has an associated object score. This score is relevant in the calculation to determine, whether
+                                    a workstation is occupied or not. A workstation is assessed to be occupied if the sum of the detected object's object scores
+                                    is greater than than 100. Consequently, the object score determines the importance of the object in determining if it is 
+                                    a sign that a workstation is occupied.<br><br>
+                                    It should be noted that each object has a case sensitive name, as it represents how the SmartVision algorithm names the predicted obejcts.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Ends"-->
+            </div>
+                {% if numberOfObjects > 0 %}
+                    <div style="display: block; max-height: 700px; overflow-y: auto; margin-top: 40px; margin-bottom: 20px; margin-left: 40px; margin-right: 40px;">
+                    <table id="dataTable1" align = "center" class="table table-hover" style = "background-color:#f8f9fa; margin-top: 20px; margin-bottom: 0px; border-width: 4px;">
+                    <thead>
+                    <tr>
+                    <th align="left" scope="col">Object&nbsp;ID</th>
+                    <th align="left" scope="col">Object&nbsp;Name</th>
+                    <th align="left" scope="col">Object&nbsp;Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for tuples in customVisionObjectList %}
+                        <tr class="table table-hover">
+                            <td align="left">{{tuples[0]}}</td>
+                            <td align="left">{{tuples[1]}}</td>
+                            <td align="left">{{tuples[2]}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+                    </div>
+                {% else %}
+                <p align="middle" id="feedback-message-p">Sorry, no Custom Vision Objects could be retrieved.</p>
+                {% endif %}
+            <!-- closing large jumbotron div-->
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div style="margin-top:80px; text-align: center;">
+                <h2 style="color:#ff5800">Change CustomVision<br>Object Scores<br>Here</h2>
+                <svg class="bi bi-caret-down" width="3.5em" height="3.5em" viewBox="0 0 16 16" fill="currentColor" style="color:#ff5800;"  xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 001.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 00-.753 1.659z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <div class = "jumbotron rounded-lg" style = "min-width: 90%; padding-top:0;padding-right:0;padding-left:0; padding-bottom:10px; margin-top: 30px; margin-right: 5px; background-color:white; border: solid; border-color:#ff5800; border-width: 4px;">
+                <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800 !important; margin-bottom: 0px; padding-top:10px; padding-bottom:5px; text-align: center;">
+                    <h2 style = "color:white">Alter Object Score</h2>
+                </div>
+                    {% if numberOfObjects > 1 %}
+                    <form method="post" action="{{ url_for('updateCustomObjects')}}">
+                        <div style="margin-left:32px; margin-right:32px; margin-top: 15px;">
+                            <div class="form-group">
+                                <label for="selectedObject">Select a CustomVision Object</label>
+                                <br>
+                                <select class="form-control" name="selectedObject" id="selectedObject">
+                                    {% for tuples in customVisionObjectList %}
+                                        <option value='{{tuples[1]}}'>{{tuples[1]}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group" >
+                                <label for="objectScore">New Object Score (Integer Between 0 and 100)</label>
+                                <br>
+                                <input  class="form-control" type = "number" min = "0" max="100" name = "objectScore" id="objectScore" placeholder = "Enter Object Score" style="margin-bottom:8px">
+                                {% if objectUpdate == False %}
+                                    <div class="invalid-feedback d-block">Not a valid input*</div>
+                                {% endif %}
+                            </div>
+                            <div align ="center">
+                                <button class="btn btn-primary" type="submit" name="update" value="updateObject">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    {% else %}
+                    <p align="middle" id="feedback-message-p">Sorry, no Probability Thresholds could be retrieved.</p>
+                    {% endif %}
+            <!-- closing large jumbotron div-->
+            </div>
+            {% if objectUpdate == True %}
+                <div class="alert alert-success" style="margin-left: 5px;">
+                    <small><strong>CustomVision Object Score was Updated Successfully!</strong></small>
+                    <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                        <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                        <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </div>
+            {% endif %}
+            </div>
+    </div>
+    <div class="row justify-center">
+        <div class="col-sm-5">
+            <div style="margin-top:80px; text-align: center;">
+                <h2 style="color:#ff5800">Change Probabilty<br>Thresholds Here</h2>
+                <svg class="bi bi-caret-down" width="3.5em" height="3.5em" viewBox="0 0 16 16" fill="currentColor" style="color:#ff5800;"  xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 001.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 00-.753 1.659z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <div class = "jumbotron rounded-lg" style = "min-width: 90%; padding-top:0;padding-right:0;padding-left:0; padding-bottom:10px; margin-top: 30px; margin-right: 5px; background-color:white; border: solid; border-color:#ff5800; border-width: 4px;">
+                <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800 !important; margin-bottom: 0px; padding-top:10px; padding-bottom:5px; text-align: center;">
+                    <h2 style = "color:white">Alter Probability Thresholds</h2>
+                </div>
+                    {% if numberProbThresholds > 0 %}
+                        <form method="post" action="{{ url_for('updateCustomObjects')}}">
+                            <div style="margin-left:32px; margin-right:32px; margin-top: 15px;">
+                                <div class="form-group">
+                                    <label for="selectedItem">Select an Analysed Category</label>
+                                    <br>
+                                    <select class="form-control" name="selectedItem" id="selectedItem">
+                                        {% for items in probabilityThresholdsList %}
+                                            <option value='{{items[1]}}'>{{items[1]}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="probThreshold">New Probability Threshold (Float Between 0 and 1)</label>
+                                    <br>
+                                    <input  class="form-control" type = "number" min = "0" max="1" step="0.001" name = "probThreshold" id="probThreshold" placeholder = "Enter Probability Threshold" style="margin-bottom:8px">
+                                    {% if probThresholdUpdate == False %}
+                                        <div class="invalid-feedback d-block">Not a valid input*</div>
+                                    {% endif %}
+                                </div>
+                                <div align ="center">
+                                    <button class="btn btn-primary" type="submit" name="update" value="updateProbThresholds">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    {% else %}
+                    <p align="middle" id="feedback-message-p">Sorry, no Custom Vision Objects could be retrieved.</p>
+                    {% endif %}
+            <!-- closing large jumbotron div-->
+            </div>
+            {% if probThresholdUpdate == True %}
+                <div class="alert alert-success" style="margin-left: 5px;">
+                    <small><strong>Probability Threshold was Updated Successfully!</strong></small>
+                    <button type="button" style="padding-right: 5px; background-color: rgba(0, 0, 0, 0.0); border-color: rgba(0, 0, 0, 0.0); float: right;" data-dismiss="alert">
+                        <!--SVG source: https://icons.getbootstrap.com/icons/x-circle/-->
+                        <svg width="2em" height="2em" style="margin: auto;" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-sm-7">
+            <div class = "jumbotron rounded-lg" style = "min-width: 90%; padding-top:0;padding-right:0;padding-left:0; padding-bottom:10px; margin-top: 30px; margin-right: 5px; background-color:white; border: solid; border-color:#ff5800; border-width: 4px;">
+                <div class = "jumbotron jumbotron-fluid" style="background-color:#ff5800 !important; margin-bottom: 0px; padding-top:10px; padding-bottom:5px; text-align: center;">
+                    <h2 style = "color:white">Analysed Categories
+                     <!-- Initiator Button of Modal Starts-->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#analysedCategory" style="background-color: #ff5800 !important;">
+                            <!-- SVG Source: https://icons.getbootstrap.com/icons/info-circle/-->
+                            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" style="color:#ffffff; background-color: #ff5800 !important;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <!-- Modal Starts-->
+                    <div class="modal fade" id="analysedCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Analysed Categories</h5>
+                                </div>
+                                <div class="modal-body" style="text-align: justify;">
+                                    The analysed categories are certain groupings of items, which the SmartVision Algorithm is either looking for on a workstation,
+                                    or when analysing the emotions (or other characteristics) of an employee.<br><br>
+                                    Each category has an associated probability threshold. If the algorithms prediction value is below this threshold, then the prediction
+                                    is disregarded. If the algorithms prediction value is above the threshold, then the algorithm returns this prediction as a valid result.
+                                    Consequently, the lower the probability threshold is set for a category, the more likely it is that the algorithm will detect something 
+                                    from this category. However, the case of a false positive is also much more likely. Setting the probability threshold at a high level
+                                    increases the likelihood that the prediction is correct. However, many correctly detected results might not be returned by the algorithm,
+                                    as they do not pass the probability threshold.
+                                    a sign that a workstation is occupied.<br><br>
+                                    It should be noted that each category has a case sensitive name, as it represents how the SmartVision algorithm works with the categories.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Ends"-->
+                </div>
+                    {% if numberProbThresholds > 1 %}
+                        <div style="display: block; max-height: 700px; overflow-y: auto; margin-top: 40px; margin-bottom: 20px; margin-left: 40px; margin-right: 40px;">
+                        <table id="dataTable2" align = "center" class="table table-hover" style = "background-color:#f8f9fa; margin-top: 20px; margin-bottom: 0px; border-width: 4px;">
+                        <thead>
+                        <tr>
+                        <th align="left" scope="col">Object&nbsp;ID</th>
+                        <th align="left" scope="col">Analysed Category</th>
+                        <th align="left" scope="col">Probability Threshold</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for thresholds in probabilityThresholdsList %}
+                            <tr class="table table-hover">
+                                <td align="left">{{thresholds[0]}}</td>
+                                <td align="left">{{thresholds[1]}}</td>
+                                <td align="left">{{thresholds[2]}}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                        </table>
+                        </div>
+                    {% else %}
+                    <p align="middle" id="feedback-message-p">Sorry, no Custom Vision Objects could be retrieved.</p>
+                    {% endif %}
+            <!-- closing large jumbotron div-->
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
