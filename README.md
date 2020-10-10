@@ -85,7 +85,7 @@ Alternatively, the included requirements.txt file contains all the listed librar
 - Azure Kinect Controller System: Visual Studio 2019 (Community Edition)
 
 
-## Special Notes:
+## Special Notes
 
 - Due to file size limitations on GitHub, the suitable Python Environment, which contained all the necessary libraries, could not be included. Instead a requirements.txt file has been added, which can be executed with the Pip installer to conveniently create your own environment.
 
