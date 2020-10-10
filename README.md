@@ -30,3 +30,13 @@ The Master Thesis associated to this project can be requested from Avanade Inc.,
 - This project used a custom made detection model to detect objects, which are usually found on a workstation, to support the precision of the detection capabilities of the SmartVision system. Access to this model might be granted if permission is obtained from the author and Avanade.
 
 - In case you are setting up a new blob storage account, the blob storage needs to consist of four containers with the names: "analysedframes", "frames", "lasttakenframe", and "tests".
+
+# Other information
+
+## Who is Avanade?
+
+[Avanade](www.avanade.com) is the leading provider of innovative digital and cloud services, business solutions and design-led experiences on the Microsoft ecosystem, and the power behind the Accenture Microsoft Business Group.
+
+## Emerging Technology
+
+[Avanade Emerging Technologies](https://www.avanade.com/en-gb/thinking/research-and-insights/trendlines) helps clients not only see the future, but create it. Through applied research, experimentation, and collaboration, we empower them to make smart bets and achieve step changes in competitive advantage.
