@@ -26,16 +26,17 @@ The Master Thesis associated to this project can be requested from Avanade Inc.,
 ## Getting Started
 In order to implement the project on your own devices, please follow the step by step deployment manual guide (SmartVision_ProofOfConcept_DeploymentandUserManuel_Constantin_Ulbrich_vFinalAvanade.pdf). This document also contains the user manual of the SmartVision system. The following section provides a high level overview on the components and relationships of the system.
 
-# Bill of Materials
 
-## Components & Physical Hardware
+## Bill of Materials
+
+### Components & Physical Hardware
 
 - Azure Kinect DK Sensor or an RGB Camera, which can be connect via USB to the local machine (e.g. the local machine's webcam)
 - Local machine, which runs on a Windows 10 OS (the Azure Kinect DK has compatibility issues with macOS)
 - Azure Services: Azure Computer Vision, Azure Face, Azure Custom Vision, Azure Blob Storage
 - Local MySQL database
 
-## Dependencies
+### Dependencies
 
 The SmartVision System actually consists of two systems: the Azure Kinect Controller System and the SmartVision System. The Azure Kinect Controller System operates the Azure Kinect DK (controlling the sensors) and ensures that the captured sensor data is accessible for the SmartVision System. The SmartVision System contains the SmartVision Algorithm, which is responsible for analyzing the captured data. Additionally, it contains the user interface to control the SmartVision Algorithm, as well as the automated tests for the system.
 
@@ -46,7 +47,7 @@ Note: The SmartVision System has been programmed in Python, while the Azure Kine
 
 ### Software & Libraries
 
-#### Azure Kinect Controller System
+##### Azure Kinect Controller System
 The system requires the following SDKs/packages:
 - Azure Kinect Sensor SDK
 - <k4a/k4a.h>
@@ -60,7 +61,7 @@ The system requires the following SDKs/packages:
 - <cpprest/containerstream.h>
 
 
-#### SmartVision System 
+##### SmartVision System 
 The system requires a Python interpreter (Python 3.8+) with the following non-standard packages installed:
 -	opencv-python 4.4.0.42
 -	azure-cognitiveservies-vision-computervision 0.6.0
@@ -96,14 +97,37 @@ Alternatively, the included requirements.txt file contains all the listed librar
 
 - In case you are setting up a new blob storage account, the blob storage needs to consist of four containers with the names: "analysedframes", "frames", "lasttakenframe", and "tests".
 
-# Other information
 
-## Who is Avanade?
+## Other information
+
+### Who is Avanade?
 
 [Avanade](www.avanade.com) is the leading provider of innovative digital and cloud services, business solutions and design-led experiences on the Microsoft ecosystem, and the power behind the Accenture Microsoft Business Group.
 
-## Emerging Technology
+### Emerging Technology
 
 [Avanade Emerging Technologies](https://www.avanade.com/en-gb/thinking/research-and-insights/trendlines) helps clients not only see the future, but create it. Through applied research, experimentation, and collaboration, we empower them to make smart bets and achieve step changes in competitive advantage.
 
-# Sources, License and Attribution
+## Sources, License and Attribution
+  
+MIT License
+
+Copyright (c) 2020 Avanade Inc
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
