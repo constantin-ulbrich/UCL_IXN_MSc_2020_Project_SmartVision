@@ -54,11 +54,11 @@ The system requires the following SDKs/packages:
 - <k4arecord/record.h>
 - <stdio.h>
 - <stdlib.h>
-- <fstream> 
 - <was/storage_account.h>
 - <was/blob.h>
 - <cpprest/filestream.h>  
 - <cpprest/containerstream.h>
+- <fstream> 
 
 
 ##### SmartVision System 
@@ -108,7 +108,7 @@ Alternatively, the included requirements.txt file contains all the listed librar
 
 [Avanade Emerging Technologies](https://www.avanade.com/en-gb/thinking/research-and-insights/trendlines) helps clients not only see the future, but create it. Through applied research, experimentation, and collaboration, we empower them to make smart bets and achieve step changes in competitive advantage.
 
-## Sources, License and Attribution
+## License
   
 MIT License
 
