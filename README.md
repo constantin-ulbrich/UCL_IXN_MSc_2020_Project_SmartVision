@@ -15,9 +15,9 @@ This project was conducted for research, by the Avanade Emerging Technology team
 ## What does this repository contain?
 
 This repository contains the research and proof of concept deliverable for the Smart Vision Industry Project with Avanade Inc.:
-- SmartVision_ProofOfConcept_DeploymentandUserManuel_Constantin_Ulbrich_vFinalAvanade.pdf
-- SmartVision_ResearchDeliverable_Constantin_Ulbrich_vFinalAvanade.pdf
-- COMP0073_SmartVision_Project (Folder)
+- [Deployment and User Manual of the SmartVision System](deployment_and_user_manual/SmartVision_ProofOfConcept_DeploymentandUserManuel_Constantin_Ulbrich_vFinalAvanade.pdf)
+- [Research Deliverable for the SmartVision Project](research_component/SmartVision_ResearchDeliverable_Constantin_Ulbrich_vFinalAvanade.pdf)
+- [COMP0073 SmartVision Project Source Code](src)
   - Azure_Kinect_Controller (Folder containing the source code to control the Azure Kinect DK Sensor and corresponding log files)
   - COMP0073_SmartVision_Prototype (Folder containing all source code components of the SmartVision System, including automated tests)
 
@@ -58,7 +58,7 @@ The system requires the following SDKs/packages:
 - <was/blob.h>
 - <cpprest/filestream.h>  
 - <cpprest/containerstream.h>
-- <fstream> 
+- < fstream > 
 
 
 ##### SmartVision System 
